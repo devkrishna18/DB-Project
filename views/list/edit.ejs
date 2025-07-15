@@ -1,0 +1,39 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row mt-3">
+    <div class="col-8 offset-2">     
+  <form method="post" action="/listing/<%= list._id %>?_method=PUT">
+     <h3>Edit Your Listing</h3>
+        <div class="mb-3">
+            <label for="title" class="form-lable">Title</label>
+            <input name="title" value="<%= list.title %>" type="text" placeholder="enter the title" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-lable">Description</label>
+             <textarea name="description" class="form-control" id=""><%= list.description %></textarea>
+        </div>
+        <div class="mb-3">
+             <label for="image" class="form-lable">Image url link</label>
+             <input name="image" type="text" class="form-control"  value="<%= list.image %>"placeholder="enter the img url/link">
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+            <label for="price" class="form-lable">Price</label>
+            <input name="price" class="form-control" value="<%= list.price %>"type="number" placeholder="enter the price">
+        </div>
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-lable">Location</label>
+             <input name="location" class="form-control" value="<%= list.location %>" type="text" placeholder="enter the location">
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-lable">Country</label>
+            <input name="country" class="form-control"  value="<%= list.country %>" type="text" placeholder="enter the country">
+        </div>
+
+        <button type="submit" class="btn btn-outline-secondary">Edit</button>
+        <br><br>
+        </form>
+    </div>
+</div>
+
+    
